@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/add_courses"
+        android:id="@+id/add_lessons"
         android:icon="@drawable/add"
         android:title="课程"
         app:showAsAction="ifRoom"/>

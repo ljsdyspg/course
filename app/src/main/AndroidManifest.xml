@@ -22,7 +22,7 @@
             android:label="新建课程"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".FillActivity"
             android:label="测试"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
     </application>

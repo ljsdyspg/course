@@ -4,21 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 public class AddCourseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_course);
+        setContentView(R.layout.activity_add_lesson);
       //setFinishOnTouchOutside(false);
 
         final EditText inputcourseName = (EditText) findViewById(R.id.course_name);
@@ -43,11 +38,10 @@ public class AddCourseActivity extends AppCompatActivity {
                     Toast.makeText(AddCourseActivity.this, "基本课程信息未填写", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Course course = new Course(courseName, teacher, classRoom,
-                            Integer.valueOf(day), Integer.valueOf(start), Integer.valueOf(end));
+                    Lesson lesson = new Lesson(courseName, teacher, classRoom, day, start, end);
                     Intent intent = new Intent(AddCourseActivity.this, MainActivity.class);
                     //传递实例
-                    intent.putExtra("courses",course);
+                    intent.putExtra("lessons",lesson);
 
                     setResult(0, intent);
                     finish();

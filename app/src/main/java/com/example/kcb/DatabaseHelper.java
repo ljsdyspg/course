@@ -12,9 +12,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //第一次创建数据库的时候会用到该方法，所以用的就是create table 这样的语法
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table courses(" +
+        db.execSQL("create table lessons(" +
                 "id integer primary key autoincrement," +
-                "course_name text," +
+                "lesson_name text," +
                 "teacher_name text," +
                 "class_room text," +
                 "day integer," +
